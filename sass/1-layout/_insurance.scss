@@ -1,0 +1,34 @@
+.insurance {
+    background-color: $secondary-green;
+    padding: .1rem;
+    text-align: center;
+
+    h1 {
+        color: $main-blue;
+        font-size: 2.8rem;
+        margin: 9rem auto 2rem;
+    }
+
+    p {
+        font-size: 2.1rem;
+        color: $main-blue;
+        margin-top: 3rem;
+    }
+
+    &__list {
+        padding: 0;
+        max-width: 90rem;
+        list-style: none;
+        @extend %flex-center;
+        flex-wrap: wrap;
+        margin: 5rem auto 12rem;
+    }
+
+    &__item {
+        margin: 2rem 4.5rem;
+
+        img {
+            width: 20rem;
+        }
+    }
+}

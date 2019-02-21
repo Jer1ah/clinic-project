@@ -1,0 +1,18 @@
+//BASE FOLDER
+@import "0-base/base";
+@import "0-base/functions";
+@import "0-base/keyframes";
+@import "0-base/mixins";
+@import "0-base/variables";
+
+//LAYOUT FOLDER
+@import "1-layout/header";
+@import "1-layout/about";
+@import "1-layout/services";
+@import "1-layout/insurance";
+@import "1-layout/footer";
+
+//MODULES FOLDER
+@import "2-modules/navigation";
+
+//VENDOR FOLDER

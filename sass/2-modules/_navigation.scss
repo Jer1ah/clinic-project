@@ -1,0 +1,44 @@
+.nav {
+    width: 100%;
+    background-color: $main-blue;
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    left: 0;
+
+    &__wrapper {
+        @extend %flex-space-between;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        @extend %flex-space-between;
+        width: 24rem;
+
+        img {
+            height: 6.5rem;
+        }
+
+        h3 {
+            color: $main-white;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__list {
+        @extend %flex-center;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 0 1.3rem;
+        
+        a {
+            color: $main-white;
+            text-decoration: none;
+            font-size: 1.65rem;
+        }
+    }
+}

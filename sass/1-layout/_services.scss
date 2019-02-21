@@ -1,0 +1,83 @@
+.services {
+    text-align: center;
+    background-color: $main-white;
+    padding: .1rem;
+
+    h1 {
+        color: $main-blue;
+        font-size: 2.8rem;
+        margin-top: 9rem;
+    }
+
+    p {
+        @include para(60rem);
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        @extend %flex-center;
+        margin-top: 7rem;
+    }
+
+    &__item {
+
+        &--one {
+            background: linear-gradient(rgba(242, 255, 252, .35), rgba(242, 255, 252, .35)),
+                        url("../../img/vaccine.png");
+            background-size: cover;
+            height: 37rem;
+            width: 24rem;
+            margin: 0 1.5rem;
+            position: relative;
+        }
+
+        &--two {
+            background: linear-gradient(rgba(242, 255, 252, .35), rgba(242, 255, 252, .35)),
+                        url("../../img/lab.png");
+            background-size: cover;
+            height: 37rem;
+            width: 24rem;
+            margin: 0 1.5rem;
+            position: relative;
+        }
+
+        &--three {
+            background: linear-gradient(rgba(242, 255, 252, .35), rgba(242, 255, 252, .35)),
+                        url("../../img/occuDoctor.png");
+            background-size: cover;
+            height: 37rem;
+            width: 24rem;
+            margin: 0 1.5rem;
+            position: relative;
+        }
+
+        &--four {
+            background: linear-gradient(rgba(242, 255, 252, .35), rgba(242, 255, 252, .35)),
+                        url("../../img/bandage.png");
+            background-size: cover;
+            height: 37rem;
+            width: 24rem;
+            margin: 0 1.5rem;
+            position: relative;
+        }
+
+        &--overlay {
+            background-color: rgba(250, 250, 250, .8);
+            font-size: 1.9rem;
+            color: $main-blue;
+            position: absolute;
+            top: 20rem;
+            left: 3.3rem;
+            width: 17rem;
+            height: 9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+     button {
+         @include button(9rem, 7rem);
+     }
+}

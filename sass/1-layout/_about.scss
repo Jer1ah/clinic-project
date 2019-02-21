@@ -1,0 +1,42 @@
+.about {
+    text-align: center;
+    padding: .1rem;
+    background-color: $secondary-green;
+
+    h1 {
+        color: $main-blue;
+        font-size: 2.8rem;
+        margin: 11rem auto 2rem;
+    }
+
+    p {
+        @include para(76rem);
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none; 
+        @extend %flex-center;
+        margin: 9rem auto 0;
+    }
+
+    &__item {
+        text-align: center;
+        width: 20rem;
+        margin: 0 2.2rem;
+
+        img {
+            width: 6.9rem;
+        }
+
+        h5 {
+            color: $main-blue;
+            font-size: 2rem;
+            margin-top: 1.45rem;
+        }
+    }
+
+    button {
+        @include button(5.5rem, 5rem);
+    }
+}
