@@ -10,6 +10,20 @@
         @extend %flex-space-between;
         width: 80%;
         margin: 0 auto;
+
+        .mobile-nav {
+            width: 3.2rem;
+            display: none;
+            transition: all 1s;
+        }
+
+        .mobile-nav:active {
+            transform: rotate(300deg);
+        }
+
+        .mobile-nav:hover {
+            cursor: pointer;
+        }
     }
 
     &__logo {
@@ -23,6 +37,7 @@
         h3 {
             color: $main-white;
             font-size: 2.5rem;
+            margin: auto;
         }
     }
 
@@ -39,6 +54,67 @@
             color: $main-white;
             text-decoration: none;
             font-size: 1.65rem;
+        }
+    }
+
+    &__item:hover {
+        cursor: pointer;
+
+        a {
+            color: $main-green;
+        }
+    }
+}
+
+
+@media( max-width: 830px ) {
+    .nav {
+        &__list {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            background-color: darken(#1862AB, 3%);
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+
+        &__item {
+            border-bottom: .1rem solid darken(white, 2%);
+            width: 100%;
+            text-align: center;
+            padding: 1.2rem 0;
+            
+            a {
+                font-size: 2.8rem;
+            }
+        }
+
+        &__item:last-child {
+            border: none;
+        }
+
+        &__item:first-child {
+            margin-top: -20rem;
+        }
+
+        .mobile-nav {
+            display: inline-flex;
+            position: absolute;
+            right: 5.5rem;
+            z-index: 111;
+        }
+    }
+}
+
+@media( max-width: 450px ) {
+    .nav__wrapper {
+        width: 93%;
+
+        .mobile-nav {
+            right: 2.5rem;
         }
     }
 }

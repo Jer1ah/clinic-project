@@ -4,6 +4,7 @@ body, html {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "PT Sans", sans-serif;
+  position: relative;
 }
 
 .nav__logo, .nav__wrapper {
@@ -55,7 +56,34 @@ body, html {
   width: 16rem;
   margin: 3.5rem auto 0;
 }
+.header__heading button:hover {
+  cursor: pointer;
+  background-color: #11dfa9;
+}
 
+@media (max-width: 710px) {
+  .header h1 {
+    font-size: 5.5rem;
+  }
+  .header h3 {
+    font-size: 2.3rem;
+  }
+  .header h5 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 465px) {
+  .header h1 {
+    font-size: 4.7rem;
+  }
+  .header h3 {
+    font-size: 2.3rem;
+    margin-bottom: 0;
+  }
+  .header h5 {
+    display: none;
+  }
+}
 .about {
   text-align: center;
   padding: 0.1rem;
@@ -72,11 +100,13 @@ body, html {
   font-size: 2.1rem;
   line-height: 3.2rem;
   color: #1862AB;
+  max-width: 90%;
 }
 .about__list {
   padding: 0;
   list-style: none;
   margin: 9rem auto 0;
+  flex-wrap: wrap;
 }
 .about__item {
   text-align: center;
@@ -100,6 +130,10 @@ body, html {
   width: 16rem;
   margin: 5.5rem auto 5rem;
 }
+.about button:hover {
+  cursor: pointer;
+  background-color: #11dfa9;
+}
 
 .services {
   text-align: center;
@@ -117,11 +151,13 @@ body, html {
   font-size: 2.1rem;
   line-height: 3.2rem;
   color: #1862AB;
+  max-width: 90%;
 }
 .services__list {
   padding: 0;
   list-style: none;
   margin-top: 7rem;
+  flex-wrap: wrap;
 }
 .services__item--one {
   background: linear-gradient(rgba(242, 255, 252, 0.35), rgba(242, 255, 252, 0.35)), url("../../img/vaccine.png");
@@ -177,7 +213,35 @@ body, html {
   width: 16rem;
   margin: 9rem auto 7rem;
 }
+.services button:hover {
+  cursor: pointer;
+  background-color: #11dfa9;
+}
 
+@media (max-width: 1082px) {
+  .services__list {
+    width: 75rem;
+    margin: 5rem auto 0;
+    max-width: 90%;
+  }
+
+  .services__item--three, .services__item--four {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 625px) {
+  .services__list {
+    min-width: 100%;
+  }
+  .services__item--one, .services__item--two, .services__item--three, .services__item--four {
+    width: 100%;
+    margin: 2rem 0;
+    height: 37rem;
+  }
+  .services button {
+    margin-top: 5rem;
+  }
+}
 .insurance {
   background-color: #F2FFFC;
   padding: 0.1rem;
@@ -260,6 +324,10 @@ body, html {
   background-color: #10D19E;
   color: #fcfcfc;
 }
+.footer__form button:hover {
+  cursor: pointer;
+  background-color: #11dfa9;
+}
 .footer__list {
   padding: 0;
   list-style: none;
@@ -276,6 +344,9 @@ body, html {
 }
 .footer__list--item img {
   width: 2rem;
+}
+.footer__list--item img:hover {
+  cursor: pointer;
 }
 .footer__list--item:last-child {
   padding-top: 0.2rem;
@@ -296,6 +367,17 @@ body, html {
   width: 80%;
   margin: 0 auto;
 }
+.nav__wrapper .mobile-nav {
+  width: 3.2rem;
+  display: none;
+  transition: all 1s;
+}
+.nav__wrapper .mobile-nav:active {
+  transform: rotate(300deg);
+}
+.nav__wrapper .mobile-nav:hover {
+  cursor: pointer;
+}
 .nav__logo {
   width: 24rem;
 }
@@ -305,6 +387,7 @@ body, html {
 .nav__logo h3 {
   color: #fcfcfc;
   font-size: 2.5rem;
+  margin: auto;
 }
 .nav__list {
   padding: 0;
@@ -317,6 +400,55 @@ body, html {
   color: #fcfcfc;
   text-decoration: none;
   font-size: 1.65rem;
+}
+.nav__item:hover {
+  cursor: pointer;
+}
+.nav__item:hover a {
+  color: #10D19E;
+}
+
+@media (max-width: 830px) {
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #165a9e;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    left: 0;
+    top: 0;
+  }
+  .nav__item {
+    border-bottom: 0.1rem solid #fafafa;
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem 0;
+  }
+  .nav__item a {
+    font-size: 2.8rem;
+  }
+  .nav__item:last-child {
+    border: none;
+  }
+  .nav__item:first-child {
+    margin-top: -20rem;
+  }
+  .nav .mobile-nav {
+    display: inline-flex;
+    position: absolute;
+    right: 5.5rem;
+    z-index: 111;
+  }
+}
+@media (max-width: 450px) {
+  .nav__wrapper {
+    width: 93%;
+  }
+  .nav__wrapper .mobile-nav {
+    right: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

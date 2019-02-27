@@ -60,6 +60,11 @@
             background-color: $main-green;
             color: $main-white;
         }
+
+        button:hover {
+            cursor: pointer;
+            background-color: lighten(#10D19E, 3%);
+        }
     }
 
     &__list {
@@ -78,6 +83,10 @@
 
             img {
                 width: 2rem;
+            }
+
+            img:hover {
+                cursor: pointer;
             }
         }
 
