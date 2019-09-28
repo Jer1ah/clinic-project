@@ -27,3 +27,11 @@ mobileNav.addEventListener("click", () => {
         mobileNav.src = "img/close.svg";
     }
 });
+
+const revStr = (str) => {
+    if(str === "") return "";
+    return revStr(str.substr(1)) + str[0];
+}
+
+console.log(revStr("google"));
+
